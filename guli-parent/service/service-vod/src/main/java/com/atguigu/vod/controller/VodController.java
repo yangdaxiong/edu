@@ -21,7 +21,7 @@ public class VodController {
     @Autowired
     private VodService vodService;
 
-    //上传视频到阿里云
+    //上传视频到阿里云上面
     @PostMapping("uploadAlyiVideo")
     public R uploadAlyiVideo(MultipartFile file) {
         //返回上传视频id
