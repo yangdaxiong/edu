@@ -1,17 +1,17 @@
-package com.atguigu.oss;
+package com.atguigu.educms;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.ComponentScan;
 
-@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
-@ComponentScan(basePackages = {"com.atguigu"})
+@SpringBootApplication
+@ComponentScan({"com.atguigu"}) //指定扫描位置
 @EnableDiscoveryClient  //nacos注册
-public class OssApplication {
-
+@MapperScan("com.atguigu.educms.mapper")
+public class CmsApplication {
     public static void main(String[] args) {
-        SpringApplication.run(OssApplication.class, args);
+        SpringApplication.run(CmsApplication.class, args);
     }
 }
