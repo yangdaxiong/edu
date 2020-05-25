@@ -1,6 +1,7 @@
 package com.atguigu.edu.mapper;
 
 import com.atguigu.edu.entity.EduCourse;
+import com.atguigu.edu.entity.frontvo.CourseWebVo;
 import com.atguigu.edu.entity.vo.CoursePublishVo;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
@@ -15,5 +16,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 public interface EduCourseMapper extends BaseMapper<EduCourse> {
 
     public CoursePublishVo getPublishCourseInfo(String courseId);
+
+    //根据课程id，编写sql语句查询课程信息
+    CourseWebVo getBaseCourseInfo(String courseId);
 
 }
