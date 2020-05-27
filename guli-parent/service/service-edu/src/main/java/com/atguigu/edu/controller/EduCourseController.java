@@ -1,8 +1,10 @@
 package com.atguigu.edu.controller;
 
 
+import com.atguigu.commonutils.JwtUtils;
 import com.atguigu.commonutils.R;
 import com.atguigu.edu.entity.EduCourse;
+import com.atguigu.edu.entity.chapter.ChapterVo;
 import com.atguigu.edu.entity.vo.CourseInfoVo;
 import com.atguigu.edu.entity.vo.CoursePublishVo;
 import com.atguigu.edu.entity.vo.CourseQuery;
@@ -16,6 +18,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
